@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\Services\Gateway\RemoteGateway;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;

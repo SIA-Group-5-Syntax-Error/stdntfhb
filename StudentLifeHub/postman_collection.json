@@ -1,0 +1,352 @@
+{
+  "info": {
+    "_postman_id": "1f9be340-dc75-45f2-a8f3-b03422909231",
+    "name": "StudentLifeHub API",
+    "description": "Collection for StudentLifeHub API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52386360"
+  },
+  "item": [
+    {
+      "name": "Books",
+      "description": "Endpoints for searching and discovering books within the StudentLifeHub platform.",
+      "item": [
+        {
+          "name": "Search Books",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/books/search?title=term",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "books",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "title",
+                  "value": "term"
+                }
+              ]
+            },
+            "description": "Searches for books by title using the `title` query parameter."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Announcements",
+      "description": "CRUD endpoints for announcements.",
+      "item": [
+        {
+          "name": "List Announcements",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/announcements",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "announcements"
+              ]
+            },
+            "description": "Retrieve all announcements."
+          },
+          "response": []
+        },
+        {
+          "name": "Get Announcement by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/announcements/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "announcements",
+                "1"
+              ]
+            },
+            "description": "Retrieve a specific announcement by ID."
+          },
+          "response": []
+        },
+        {
+          "name": "Create Announcement",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"New Event\",\n  \"content\": \"Event details here\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/announcements",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "announcements"
+              ]
+            },
+            "description": "Create a new announcement."
+          },
+          "response": []
+        },
+        {
+          "name": "Update Announcement",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Updated Title\",\n  \"content\": \"Updated content\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/announcements/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "announcements",
+                "1"
+              ]
+            },
+            "description": "Update an existing announcement."
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Announcement",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/announcements/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "announcements",
+                "1"
+              ]
+            },
+            "description": "Delete an announcement by ID."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Dictionary",
+      "description": "Dictionary lookup endpoints.",
+      "item": [
+        {
+          "name": "Search Word",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/dictionary/search?word=example",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "dictionary",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "word",
+                  "value": "example"
+                }
+              ]
+            },
+            "description": "Lookup a word definition using the `word` query parameter."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Tasks",
+      "description": "CRUD endpoints for tasks.",
+      "item": [
+        {
+          "name": "List Tasks",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/tasks",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tasks"
+              ]
+            },
+            "description": "Retrieve all tasks."
+          },
+          "response": []
+        },
+        {
+          "name": "Create Task",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Buy groceries\",\n  \"completed\": false\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/tasks",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tasks"
+              ]
+            },
+            "description": "Create a new task."
+          },
+          "response": []
+        },
+        {
+          "name": "Update Task",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"completed\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/tasks/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tasks",
+                "1"
+              ]
+            },
+            "description": "Update a task status."
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Task",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/tasks/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tasks",
+                "1"
+              ]
+            },
+            "description": "Delete a task by ID."
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000"
+    }
+  ]
+}
